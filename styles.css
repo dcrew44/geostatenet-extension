@@ -1,0 +1,173 @@
+/* styles.css - Styles for the in-game UI */
+.geo-assistant-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 220px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    z-index: 9999;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    font-family: Arial, sans-serif;
+  }
+  
+  .geo-assistant-header {
+    padding: 8px 10px;
+    background-color: #4285f4;
+    color: white;
+    font-weight: bold;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .geo-assistant-content {
+    padding: 10px;
+  }
+  
+  .geo-assistant-content button {
+    margin: 5px 0;
+    padding: 8px 12px;
+    background-color: #4285f4;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 13px;
+    transition: background-color 0.2s;
+  }
+  
+  .geo-assistant-content button:hover {
+    background-color: #3367d6;
+  }
+  
+  .geo-assistant-content button:active {
+    background-color: #2a56c6;
+  }
+  
+  .geo-assistant-screenshot-preview {
+    margin-top: 5px;
+    padding: 8px;
+    max-height: 150px;
+    overflow-y: auto;
+    border-top: 1px solid #ccc;
+  }
+  
+  .geo-assistant-screenshot-preview img {
+    max-width: 100%;
+    border: 1px solid #ddd;
+  }
+  .geo-assistant-debug-info {
+    margin-top: 10px;
+    padding: 8px;
+    max-height: 200px;
+    overflow-y: auto;
+    border-top: 1px solid #ccc;
+    font-size: 12px;
+    background-color: #f8f8f8;
+  }
+  
+  .geo-assistant-debug-info h4 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 13px;
+  }
+  
+  .geo-assistant-debug-info ul {
+    margin: 5px 0;
+    padding-left: 15px;
+  }
+  
+  .geo-assistant-debug-info li {
+    margin-bottom: 2px;
+  }
+  /* styles.css - Styles for the in-game UI */
+
+/* ... (keep existing styles if any) ... */
+
+
+/* Styles for the Manual Capture Panel */
+#geoguesser-assistant-capture-panel {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.75); /* Slightly darker */
+  color: white;
+  border: 1px solid #666;
+  border-radius: 8px; /* More rounded */
+  padding: 15px 20px;
+  z-index: 100000;
+  font-family: Arial, sans-serif;
+  font-size: 15px; /* Slightly larger */
+  text-align: center;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.6);
+  min-width: 300px; /* Ensure enough width */
+}
+
+#geoguesser-assistant-capture-panel-text {
+  margin-bottom: 12px; /* More space */
+  font-weight: bold;
+}
+
+#geoguessr-assistant-capture-panel button {
+  padding: 6px 12px;
+  margin-left: 5px;
+  margin-right: 5px;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+#geoguessr-assistant-capture-panel button#geoguesser-assistant-capture-panel-capture {
+  background-color: #4CAF50; /* Green */
+  color: white;
+  border-color: #3a8a3e;
+}
+#geoguessr-assistant-capture-panel button#geoguesser-assistant-capture-panel-capture:disabled {
+  background-color: #a5d6a7;
+  cursor: default;
+  opacity: 0.7;
+}
+
+
+#geoguessr-assistant-capture-panel button#geoguesser-assistant-capture-panel-cancel {
+  background-color: #f44336; /* Red */
+  color: white;
+  border-color: #c4302b;
+}
+
+/* Styles for the Results/Error Panel (can reuse previous styles or define here) */
+#geoguesser-assistant-results {
+  /* ... Add styles if not already defined elsewhere ... */
+  position: fixed; top: 10px; right: 10px; width: 250px;
+  background-color: rgba(255, 255, 255, 0.9); border: 1px solid #ccc;
+  border-radius: 5px; padding: 10px; z-index: 99999;
+  font-family: Arial, sans-serif; font-size: 13px; line-height: 1.4;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+#geoguesser-assistant-results strong { /* Style top prediction */
+  display: block; margin-bottom: 5px;
+}
+#geoguesser-assistant-results hr {
+   margin: 8px 0; border: none; border-top: 1px solid #eee;
+}
+#geoguesser-assistant-results div { /* Style prediction list items */
+  padding: 2px 0;
+}
+
+/* Error specific style */
+#geoguesser-assistant-results[style*="rgb(255, 220, 220)"] { /* Target error panel by its background color */
+   border-color: #f88;
+}
+
+#geoguesser-assistant-results button { /* Close button */
+  position: absolute; top: 2px; right: 2px; background: #eee;
+  border: 1px solid #ccc; border-radius: 3px; cursor: pointer;
+  font-size: 10px; line-height: 1; padding: 2px 4px;
+}
+
+

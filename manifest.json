@@ -1,0 +1,58 @@
+{
+  "manifest_version": 3,
+  "name": "GeoGuesser Assistant",
+  "version": "1.1", 
+  "description": "A tool to assist with GeoGuesser gameplay",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/icon16.png",
+      "48": "images/icon48.png",
+      "128": "images/icon128.png"
+    }
+  },
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage",
+    "commands", 
+    "notifications" 
+  ],
+  "host_permissions": [
+    "http://127.0.0.1:8000/*",
+    "https://*.geoguessr.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.geoguessr.com/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ],
+  "commands": {
+    "start_panorama": {
+      "suggested_key": {
+        "default": "Alt+Shift+P",
+        "mac": "Alt+Shift+P"
+      },
+      "description": "Start Manual Panorama Capture"
+    },
+    "trigger_capture": {
+      "suggested_key": {
+        "default": "Alt+Shift+X", 
+        "mac": "Alt+Shift+X"
+      },
+      "description": "Trigger Capture during Panorama"
+    },
+    "predict_single": {
+       "suggested_key": {
+        "default": "Alt+Shift+S",
+        "mac": "Alt+Shift+S"
+      },
+      "description": "Predict Single View"
+    }
+  }
+}
